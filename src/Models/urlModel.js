@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 let validateurl = function (longurl) {
-    longurlRegex = "/(http(s)?://.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/";
+    longurlRegex = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/
     return longurlRegex.test(longurl)
 }
 

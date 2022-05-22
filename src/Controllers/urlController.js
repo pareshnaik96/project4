@@ -79,7 +79,7 @@ const createShortUrl = async function (req, res) {
         if (alreadyExistcode)
             return res.status(400).send({ status: false, msg: `${UrlCode} is already exist` })
 
-        let shortUrl = baseUrl + '/' + shortUrlCode
+        let shortUrl = baseUrl + '/' + UrlCode
 
         let alreadyShortUrl = await urlModel.findOne({ shortUrl: shortUrl })
 
